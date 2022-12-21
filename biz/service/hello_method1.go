@@ -2,6 +2,7 @@ package service
 
 import (
 	"context"
+
 	"github.com/cloudwego/hertz/pkg/app"
 	example "github.com/hertz/hello/biz/hertz_gen/hello/example"
 )

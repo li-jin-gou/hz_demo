@@ -11,6 +11,7 @@ layouts:
 
       import (
       	"context"
+
         "{{.ProjPackage}}/biz/service"
       	"github.com/cloudwego/hertz/pkg/app"
 
@@ -281,11 +282,12 @@ layouts:
       package {{.PackageName}}
 
       import (
-       "bytes"
-       "github.com/cloudwego/hertz/pkg/app/server"
-       "github.com/cloudwego/hertz/pkg/common/test/assert"
-       "github.com/cloudwego/hertz/pkg/common/ut"
-       "testing"
+        "bytes"
+        "testing"
+
+        "github.com/cloudwego/hertz/pkg/app/server"
+        "github.com/cloudwego/hertz/pkg/common/test/assert"
+        "github.com/cloudwego/hertz/pkg/common/ut"
       )
 
       {{range $_, $MethodInfo := .Methods}}

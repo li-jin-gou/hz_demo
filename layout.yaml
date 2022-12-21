@@ -346,13 +346,12 @@ layouts:
 
       import (
       	"context"
+
       	"github.com/go-redis/redis/v8"
       	"{{.GoModule}}/conf"
       )
 
-      var (
-      	RedisClient *redis.Client
-      )
+      var RedisClient *redis.Client
 
       func Init() {
       	RedisClient = redis.NewClient(&redis.Options{

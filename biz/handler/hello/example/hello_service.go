@@ -4,6 +4,7 @@ package example
 
 import (
 	"context"
+
 	"github.com/cloudwego/hertz/pkg/app"
 	example "github.com/hertz/hello/biz/hertz_gen/hello/example"
 	"github.com/hertz/hello/biz/service"
