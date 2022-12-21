@@ -4,7 +4,7 @@ import (
 	"context"
 	"github.com/cloudwego/hertz/pkg/app"
 	"github.com/cloudwego/hertz/pkg/common/test/assert"
-	example "github.com/hertz/hello/biz/model/hello/example"
+	example "github.com/hertz/hello/biz/hertz_gen/hello/example"
 	"testing"
 )
 

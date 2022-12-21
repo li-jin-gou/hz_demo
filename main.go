@@ -32,12 +32,6 @@ func main() {
 }
 
 func registerMiddleware(h *server.Hertz) {
-	// recovery
-	h.Use(recovery.Recovery())
-
-	// cores
-	h.Use(cors.Default())
-
 	// pprof
 	if conf.GetConf().Hertz.EnablePprof {
 		pprof.Register(h)
@@ -62,4 +56,10 @@ func registerMiddleware(h *server.Hertz) {
 		MaxBackups: conf.GetConf().Hertz.LogMaxBackups,
 		MaxAge:     conf.GetConf().Hertz.LogMaxAge,
 	})
+
+	// recovery
+	h.Use(recovery.Recovery())
+
+	// cores
+	h.Use(cors.Default())
 }

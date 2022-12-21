@@ -3,7 +3,7 @@ package service
 import (
 	"context"
 	"github.com/cloudwego/hertz/pkg/app"
-	example "github.com/hertz/hello/biz/model/hello/example"
+	example "github.com/hertz/hello/biz/hertz_gen/hello/example"
 )
 
 type HelloMethod2Service struct {

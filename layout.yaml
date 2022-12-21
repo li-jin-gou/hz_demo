@@ -39,12 +39,6 @@ layouts:
       }
 
       func registerMiddleware(h *server.Hertz) {
-      	// recovery
-      	h.Use(recovery.Recovery())
-
-        // cores
-        h.Use(cors.Default())
-
       	// pprof
       	if conf.GetConf().Hertz.EnablePprof {
       		pprof.Register(h)
@@ -69,6 +63,12 @@ layouts:
       		MaxBackups: conf.GetConf().Hertz.LogMaxBackups,
       		MaxAge:     conf.GetConf().Hertz.LogMaxAge,
       	})
+
+        // recovery
+        h.Use(recovery.Recovery())
+
+         // cores
+         h.Use(cors.Default())
       }
 
 
@@ -384,3 +384,31 @@ layouts:
           image: 'redis:latest'
           ports:
             - 6379:6379
+
+  - path: readme.md
+    delims:
+      - ""
+      - ""
+    body: |-
+      # *** Project
+
+      ## introduce
+
+      - Integration of pprof, cors, recovery, access_log, gzip and other extensions of Hertz.
+      - Generating the base code for unit tests.
+      - Provides basic profile functions.
+      - Provides the most basic MVC code hierarchy.
+
+      ## Directory structure
+
+      |  catalog   | introduce  |
+      |  ----  | ----  |
+      | conf  | Configuration files |
+      | main.go  | Startup file |
+      | biz/hertz_gen  | Hertz generated model |
+      | biz/handler  | Used for request processing, validation and return of response. |
+      | biz/service  | The actual business logic. |
+      | biz/dal  | Logic for operating the storage layer |
+      | biz/route  | Routing and middleware registration |
+
+
