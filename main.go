@@ -6,6 +6,7 @@ import (
 	"github.com/cloudwego/hertz/pkg/app/middlewares/server/recovery"
 	"github.com/cloudwego/hertz/pkg/app/server"
 	"github.com/cloudwego/hertz/pkg/common/hlog"
+	"github.com/hertz-contrib/cors"
 	"github.com/hertz-contrib/gzip"
 	"github.com/hertz-contrib/logger/accesslog"
 	hertzlogrus "github.com/hertz-contrib/logger/logrus"
@@ -33,6 +34,9 @@ func main() {
 func registerMiddleware(h *server.Hertz) {
 	// recovery
 	h.Use(recovery.Recovery())
+
+	// cores
+	h.Use(cors.Default())
 
 	// pprof
 	if conf.GetConf().Hertz.EnablePprof {

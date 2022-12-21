@@ -9,6 +9,7 @@ require (
 	github.com/apache/thrift v0.0.0-00010101000000-000000000000
 	github.com/cloudwego/hertz v0.4.2
 	github.com/go-redis/redis/v8 v8.11.5
+	github.com/hertz-contrib/cors v0.0.0-20220601061225-50f4e582beaf
 	github.com/hertz-contrib/gzip v0.0.1
 	github.com/hertz-contrib/logger/accesslog v0.0.0-20221206155315-4315a5ae6b90
 	github.com/hertz-contrib/logger/logrus v1.0.0
