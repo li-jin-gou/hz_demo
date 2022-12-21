@@ -208,6 +208,7 @@ layouts:
 
       import (
       	"context"
+
       	"github.com/cloudwego/hertz/pkg/app"
 
       {{- range $k, $v := .Imports}}
@@ -249,6 +250,7 @@ layouts:
       import (
         "context"
         "testing"
+
         "github.com/cloudwego/hertz/pkg/app"
         "github.com/cloudwego/hertz/pkg/common/test/assert"
 

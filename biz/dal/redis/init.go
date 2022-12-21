@@ -2,13 +2,12 @@ package redis
 
 import (
 	"context"
+
 	"github.com/go-redis/redis/v8"
 	"github.com/hertz/hello/conf"
 )
 
-var (
-	RedisClient *redis.Client
-)
+var RedisClient *redis.Client
 
 func Init() {
 	RedisClient = redis.NewClient(&redis.Options{
