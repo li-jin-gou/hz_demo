@@ -22,11 +22,11 @@ func main() {
 	address := conf.GetConf().Hertz.Address
 	h := server.New(server.WithHostPorts(address))
 
-	registerMiddleware(h)
-
 	router.GeneratedRegister(h)
 	// do what you wanted
 	// add some render data: <no value>
+
+	registerMiddleware(h)
 
 	h.Spin()
 }
