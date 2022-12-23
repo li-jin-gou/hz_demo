@@ -11,8 +11,8 @@ import (
 	"github.com/hertz-contrib/logger/accesslog"
 	hertzlogrus "github.com/hertz-contrib/logger/logrus"
 	"github.com/hertz-contrib/pprof"
-	"github.com/hertz/hello/biz/router"
-	"github.com/hertz/hello/conf"
+	"github.com/li-jin-gou/hz_demo/biz/router"
+	"github.com/li-jin-gou/hz_demo/conf"
 	"gopkg.in/natefinch/lumberjack.v2"
 )
 

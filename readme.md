@@ -13,8 +13,16 @@
 |  ----  | ----  |
 | conf  | Configuration files |
 | main.go  | Startup file |
-| biz/hertz_gen  | Hertz generated model |
+| hertz_gen  | Hertz generated model |
 | biz/handler  | Used for request processing, validation and return of response. |
 | biz/service  | The actual business logic. |
 | biz/dal  | Logic for operating the storage layer |
 | biz/route  | Routing and middleware registration |
+| biz/utils  | Wrapped some common methods |
+
+## How to run
+
+```shell
+sh build.sh
+sh output/bootstrap.sh
+```

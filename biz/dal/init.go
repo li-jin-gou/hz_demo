@@ -1,8 +1,8 @@
 package dal
 
 import (
-	"github.com/hertz/hello/biz/dal/mysql"
-	"github.com/hertz/hello/biz/dal/redis"
+	"github.com/li-jin-gou/hz_demo/biz/dal/mysql"
+	"github.com/li-jin-gou/hz_demo/biz/dal/redis"
 )
 
 func Init() {

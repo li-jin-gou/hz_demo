@@ -1,7 +1,7 @@
 package mysql
 
 import (
-	"github.com/hertz/hello/conf"
+	"github.com/li-jin-gou/hz_demo/conf"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )

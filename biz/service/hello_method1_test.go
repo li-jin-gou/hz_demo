@@ -6,16 +6,17 @@ import (
 
 	"github.com/cloudwego/hertz/pkg/app"
 	"github.com/cloudwego/hertz/pkg/common/test/assert"
-	hello "github.com/hertz/hello/biz/hertz_gen/hertz/hello"
+	example "github.com/li-jin-gou/hz_demo/hertz_gen/hello/example"
 )
 
-func TestMethod1Service_Run(t *testing.T) {
+func TestHelloMethod1Service_Run(t *testing.T) {
 	ctx := context.Background()
 	c := app.NewContext(1)
-	s := NewMethod1Service(ctx, c)
+	s := NewHelloMethod1Service(ctx, c)
 	// init req and assert value
-	req := &hello.HelloReq{}
-	resp := s.Run(req)
+	req := &example.HelloReq{}
+	resp, err := s.Run(req)
 	assert.DeepEqual(t, nil, resp)
+	assert.DeepEqual(t, nil, err)
 	// todo edit your unit test.
 }

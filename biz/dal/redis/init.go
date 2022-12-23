@@ -4,7 +4,7 @@ import (
 	"context"
 
 	"github.com/go-redis/redis/v8"
-	"github.com/hertz/hello/conf"
+	"github.com/li-jin-gou/hz_demo/conf"
 )
 
 var RedisClient *redis.Client
