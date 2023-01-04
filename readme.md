@@ -2,6 +2,7 @@
 
 ## introduce
 
+- Use the [Hertz](https://github.com/cloudwego/hertz/) framework
 - Integration of pprof, cors, recovery, access_log, gzip and other extensions of Hertz.
 - Generating the base code for unit tests.
 - Provides basic profile functions.

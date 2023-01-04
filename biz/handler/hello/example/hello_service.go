@@ -18,7 +18,7 @@ func HelloMethod1(ctx context.Context, c *app.RequestContext) {
 	var req example.HelloReq
 	err = c.BindAndValidate(&req)
 	if err != nil {
-		utils.SendErrResponse(ctx, c, consts.StatusBadRequest, err)
+		utils.SendErrResponse(ctx, c, consts.StatusOK, err)
 		return
 	}
 
@@ -38,7 +38,7 @@ func HelloMethod2(ctx context.Context, c *app.RequestContext) {
 	var req example.HelloReq
 	err = c.BindAndValidate(&req)
 	if err != nil {
-		utils.SendErrResponse(ctx, c, consts.StatusBadRequest, err)
+		utils.SendErrResponse(ctx, c, consts.StatusOK, err)
 		return
 	}
 
@@ -58,7 +58,7 @@ func HelloMethod3(ctx context.Context, c *app.RequestContext) {
 	var req example.HelloReq
 	err = c.BindAndValidate(&req)
 	if err != nil {
-		utils.SendErrResponse(ctx, c, consts.StatusBadRequest, err)
+		utils.SendErrResponse(ctx, c, consts.StatusOK, err)
 		return
 	}
 
